@@ -824,8 +824,8 @@ C
 C     Initialise netCDF output and output initial set of data:
 C
         if(netcdf_file.ne.'nonetcdf') then
-c     call write_netcdf(netcdf_file,1)                        ! *netCDF*
-c     call write_netcdf(netcdf_file,2)                        ! *netCDF*
+          call write_netcdf(netcdf_file,1)                    ! *netCDF*
+          call write_netcdf(netcdf_file,2)                    ! *netCDF*
         endif
 C
 C-----------------------------------------------------------------------
@@ -1453,7 +1453,7 @@ C
 C     Write netCDF output:
 C
             if(netcdf_file.ne.'nonetcdf') then
-c         call write_netcdf(netcdf_file,2)                    ! *netCDF*
+              call write_netcdf(netcdf_file,2)                ! *netCDF*
             endif
 C
           if(vamax.gt.vmaxl) then
@@ -1473,7 +1473,7 @@ C
 C     Close netCDF file:
 C
               if(netcdf_file.ne.'nonetcdf') then
-c           call write_netcdf(netcdf_file,3)                  ! *netCDF*
+                call write_netcdf(netcdf_file,3)              ! *netCDF*
               endif
 C
             stop
@@ -1516,7 +1516,7 @@ C
 C     Close netCDF file:
 C
         if(netcdf_file.ne.'nonetcdf') then
-c     call write_netcdf(netcdf_file,3)                        ! *netCDF*
+          call write_netcdf(netcdf_file,3)                    ! *netCDF*
         endif
 C
       stop
@@ -6011,7 +6011,7 @@ C
 C
       end
 C
-c     include 'pom2k.n'                                       ! *netCDF*
+      include 'pom2k.n'                                       ! *netCDF*
 C
 C     End of source code
 C

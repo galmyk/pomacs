@@ -150,7 +150,7 @@ C
 C
 C     Filename of netCDF "include" file:
 C
-      include '/usr/local/include/netcdf.inc'
+      include 'netcdf.inc'
 C
       integer option
 C
@@ -210,7 +210,7 @@ c   4   format(/'Incompatible versions of program and include files ',
 c    $          '..... program terminated'/)
 c       stop
 C
-      endif
+c     endif
 C
 C***********************************************************************
 C
