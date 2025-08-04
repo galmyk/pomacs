@@ -11,17 +11,20 @@ all: $(APP)
 run: $(APP)
 	./$< | tee pom2k.out
 
-$(APP): src/pom2k.f src/pom2k.c src/pom2k.n grid params
+$(APP): src/pom2k.f src/pom2k.c src/pom2k.n grid params fort.40
 	$(FC) $(FFLAGS) $< -o $@
 
 grid:
-	echo "      parameter(IM=65, JM=49, KB=21)" > $@
+	echo "      parameter(IM=41, JM=61, KB=16)" > $@
 
 params:
-	echo "      IPROBLEM = 1"       > $@
-	echo "      days     = 0.025"  >> $@
-	echo "      prtd1    = 0.0125" >> $@
-	echo "      dte      = 6.0"    >> $@
+	echo "      IPROBLEM =  3"     > $@
+	echo "      days     =  0.50" >> $@
+	echo "      prtd1    =  0.25" >> $@
+	echo "      dte      = 12.0"  >> $@
+
+fort.40: IC.dat
+	cp $< $@
 
 .PHONY: clean
 clean:
