@@ -25,4 +25,4 @@ params:
 
 .PHONY: clean
 clean:
-	rm $(APP) grid params fort.* pom2k.out
+	rm -f $(APP) grid params fort.* pom2k.out
