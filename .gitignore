@@ -1,0 +1,14 @@
+# model executables
+pom2k
+pom2k.exe
+
+# model input/output files
+grid
+params
+fort.*
+*.nc
+
+# emacs & vim
+*~
+\#*\#
+.\#*
