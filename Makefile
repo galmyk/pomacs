@@ -18,7 +18,7 @@ grid:
 	echo "      parameter(IM=65, JM=49, KB=21)" > $@
 
 params:
-	echo "      IPROBLEM = 1"       > $@
+	echo "      IPROBLEM = 2"       > $@
 	echo "      days     = 0.025"  >> $@
 	echo "      prtd1    = 0.0125" >> $@
 	echo "      dte      = 6.0"    >> $@

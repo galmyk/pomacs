@@ -871,7 +871,7 @@ C --- no wind ----
 c           wusurf(i,j)=0.e0
             wvsurf(i,j)=0.e0
        endif
-            e_atmos(i,j)=0.e0
+c           e_atmos(i,j)=0.e0
             vfluxf(i,j)=0.e0
 C
 C     Set w(i,j,1)=vflux(i,j).ne.0 if one wishes non-zero flow across
@@ -896,13 +896,13 @@ C
 C     To account for change in temperature of flow crossing the sea
 C     surface (generally quite small compared to latent heat effect)
 C
-            tatm=t(i,j,1)+tbias    ! an approximation
+c           tatm=t(i,j,1)+tbias    ! an approximation
             wtsurf(i,j)=wtsurf(i,j)+vfluxf(i,j)*(tatm-t(i,j,1)-tbias)
 C
 C     Set the salinity of water vapor/precipitation which enters/leaves
 C     the atmosphere (or e.g., an ice cover)
 C    
-            satm=0.e0              
+c           satm=0.e0              
             wssurf(i,j)=            vfluxf(i,j)*(satm-s(i,j,1)-sbias)  
 C
           end do
